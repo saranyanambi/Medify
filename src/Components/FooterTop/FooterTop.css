@@ -1,0 +1,54 @@
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left {
+    height: 100%;
+    flex: 1;
+    position: relative;
+}
+
+.footer-image1 {
+ 
+    bottom: 55px;
+    right: 100%;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-first{
+    font-family: Poppins;
+font-size: 48px;
+font-weight: 600;
+line-height: 67px;
+text-align: left;
+color: rgba(27, 60, 116, 1);
+
+}
+
+.footer-first span{
+    color: rgba(42, 167, 255, 1);
+
+}
+.send-btn{
+    background-color: rgba(42, 167, 255, 1);
+    border: none;
+    border-radius: 0.2rem;
+    color: white;
+    padding: 0.5rem;
+}
+.form-container{
+    display: flex;
+   
+    align-items: center;
+}
+.play-btn{
+    border: none;
+    background-color:white;
+   
+}
