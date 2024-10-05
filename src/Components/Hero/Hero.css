@@ -65,6 +65,32 @@ color: #5C6169;
     
 }
 
+.hero-search{
+    position: absolute;
+    top:50%;
+}
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-img-container{
+    padding: 1rem;
+}
+.card-img-container :hover{
+    border:1px solid #2AA8FF;
+    border-radius: 0.5rem;
+}
+
 @media only screen and (min-width:800px) and (max-width:1000px){
     .hero-container{
         flex-direction: column;
