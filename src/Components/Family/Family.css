@@ -1,0 +1,71 @@
+.family-wrapper{
+    background: linear-gradient(81deg, #E7F0FF 9.01%, rgba(232, 241, 255, 0.47) 89.11%);
+
+}
+.family-container{
+    display: flex;
+    gap:1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.family-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    gap:1rem;
+}
+.family-card-container{
+    display: flex;
+    padding: 2rem 0;
+    gap: 2rem;
+}
+.family-card-left-container{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.family-card-right-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap:1rem;
+}
+.family-first{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(42, 167, 255, 1);
+}
+
+.family-second{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 67px;
+    text-align: center;
+    color: rgba(27, 60, 116, 1);
+}
+.family-text{
+    font-family: Inter;
+font-size: 17px;
+font-weight: 500;
+line-height: 2rem;
+text-align: left;
+color: rgba(119, 130, 157, 1);
+}
+
+
+@media only screen and (max-width:800px){
+    .family-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .family-card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
