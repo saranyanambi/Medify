@@ -1,0 +1,190 @@
+.parent-container{
+    width: 100%;
+    height: 598px;
+    background: linear-gradient(81deg, #E7F0FF 9.01%, rgba(232, 241, 255, 0.47) 89.11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.parent-img-total{
+   
+    height: 100%;
+    display: flex;
+    flex:1;
+    justify-content: space-between;
+}
+.parent-img-container{
+    height: 100%;
+    flex: 1;
+    position: relative;
+}
+.parent-img{
+    width: 332px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    display: block;
+}
+.image1{
+
+    top: 55px;
+    left: 200px;
+}
+.image2{
+    bottom: 55px;
+    left: 100px;
+}
+
+.parent-button{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color:white;
+    position: absolute;
+    top:150px;
+    left:50px;
+    border-radius: 0.5rem;
+    border-color: white;
+}
+
+.parent-button-inner{
+    display: flex;
+    flex-direction: column;
+}
+.btn-text1{
+    font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+line-height: 27px;
+text-align: left;
+color: rgba(27, 60, 116, 1);
+
+}
+.btn-text2{
+    font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+color: rgba(119, 130, 157, 1);
+
+}
+.parent-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+}
+.parent-first{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 600;
+line-height: 27px;
+text-align: left;
+color: rgba(42, 167, 255, 1);
+
+}
+
+.parent-second{
+    font-family: Poppins;
+font-size: 48px;
+font-weight: 600;
+line-height: 67px;
+text-align: left;
+color: rgba(27, 60, 116, 1);
+
+}
+.parent-second span{
+    color: rgba(42, 167, 255, 1);
+}
+
+.parent-third{
+    font-family: Inter;
+font-size: 17px;
+font-weight: 500;
+line-height: 29px;
+text-align: left;
+color: rgba(119, 130, 157, 1);
+
+}
+.parent-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.listItem{
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(27, 60, 116, 1);
+
+}
+
+/* 
+@media screen and (max-width: 1090px) and (min-width: 1021px) {
+    .parent-img{
+        width:280px;
+    }
+    .image1{
+        top: 150px;
+        left: 200px;
+    }
+    .image2{
+        bottom: 150px;
+        left: 100px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .parent-img-total{
+        display: flex;
+        flex-direction: column;
+    }
+} */
+
+
+@media (max-width: 1090px) and (min-width: 1021px) {
+    .parent-img {
+        width: 280px; /* Smaller size for medium screens */
+    }
+    .image1 {
+        top: 10px; /* Adjust position */
+        left: 0; /* Center image */
+    }
+    .image2 {
+        bottom: 10px; /* Adjust position */
+        left: 0; /* Center image */
+    }
+}
+
+@media (max-width: 900px) {
+    .parent-img-total {
+        flex-direction: column; /* Stack vertically */
+    }
+    .parent-button {
+        position: static; /* Make button static for smaller screens */
+        margin: 10px 0; /* Add margin */
+    }
+    .image1, .image2 {
+        position: relative; /* Allow them to stack */
+        margin: 10px auto; /* Center them */
+    }
+}
+
+@media (max-width: 600px) {
+    .parent-second {
+        font-size: 32px; /* Adjust font size */
+    }
+    .parent-third {
+        font-size: 15px; /* Adjust font size */
+    }
+    .listItem {
+        font-size: 16px; /* Adjust font size */
+    }
+}
