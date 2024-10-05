@@ -1,0 +1,110 @@
+.faq-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.faq-first{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(42, 167, 255, 1);
+}
+
+.faq-second{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 67px;
+    text-align: center;
+    color: rgba(27, 60, 116, 1);
+}
+.faq-left-container
+{
+    background-image: url("../../assests/faqimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 500px;
+    aspect-ratio: 1;
+    position: relative;
+}
+.faq-right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:2rem;
+
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 600;
+line-height: 30px;
+text-align: left;
+color: rgba(27, 60, 116, 1);
+
+}
+
+.smile{
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    top: 60%; 
+    right: 80%;
+    border: none;
+    position: absolute;
+    background-color: white;
+    padding: 1rem ;
+    border-radius: 0.5rem;
+}
+
+.smile img{
+    width:30px;
+    height:30px;
+}
+.smile-inner-first{
+    font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+line-height: 33.6px;
+text-align: center;
+color: rgba(27, 60, 116, 1);
+
+}
+
+.smile-inner-second{
+    font-family: Poppins;
+font-size: 17px;
+font-weight: 400;
+line-height: 28px;
+text-align: center;
+color: rgba(119, 130, 157, 1);
+
+}
+.smile-inner{
+    display: flex;
+    flex-direction: column;
+}
+.cheer{
+    position: absolute;
+    padding: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 15px 25px 0px #0000000F;
+    left: 90%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.faq-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media screen and (max-width:600px){
+    .faq-container{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+}
