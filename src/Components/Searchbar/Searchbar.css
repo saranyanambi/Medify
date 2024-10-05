@@ -1,0 +1,15 @@
+.input-box{
+    padding: 0.5rem;
+  border: 1px solid rgba(240, 240, 240, 1);
+  border-radius: 0.2rem;
+  margin-right: 10rem;
+}
+.search-btn{
+    background-color: #2AA8FF;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+}
+.searchbar{
+    margin-top: 2rem;
+}
