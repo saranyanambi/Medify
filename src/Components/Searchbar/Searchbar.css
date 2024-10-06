@@ -1,15 +1,106 @@
-.input-box{
-    padding: 0.5rem;
-  border: 1px solid rgba(240, 240, 240, 1);
-  border-radius: 0.2rem;
-  margin-right: 10rem;
+.searchbar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.search-btn{
-    background-color: #2AA8FF;
-    border: none;
-    padding: 0.5rem 1rem;
+
+
+.input-container {
+   
+    position: relative;
+    margin-right: 10rem;
+}
+
+
+.icon-input-wrapper {
+    display: flex; /* Use flex to align items */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Needed for absolute positioning of the icon */
+}
+.location-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%; 
+    transform: translateY(-50%);
+    pointer-events: none; 
+}
+
+.input-box {
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem; 
+    border: 1px solid rgba(240, 240, 240, 1);
     border-radius: 0.2rem;
 }
-.searchbar{
+
+.search-btn {
+    background-color: #2AA8FF;
+    border: none;
+    padding: 0.5rem 3.5rem;
+    border-radius: 0.2rem;
+    gap:0.2rem;
+    color: white;
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0.02em;
+text-align: left;
+position: relative;
+display: flex;
+align-items: center;
+
+}
+
+.search-btn img{
+    position: absolute;
+    left:10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 5rem;
+}
+
+.searchbar {
     margin-top: 2rem;
+    background-color: white;
+    border: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.searchbar-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .input-container {
+        margin-right: 1rem; /* Adjust margin for smaller screens */
+       
+    }
+
+    .search-btn {
+        width: 100%; 
+        
+    }
+    .location-icon{
+        width:14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchbar-container {
+        flex-direction: column;
+        gap:0.5rem;
+        
+    }
+
+    .input-container {
+        margin-right: 0;
+        flex: 1 1 100%;
+    }
+    .location-icon{
+        width: 14px;
+    }
 }
