@@ -1,0 +1,126 @@
+.hospital-first{
+    font-family: Poppins;
+font-size: 24px;
+font-weight: 500;
+line-height: 36px;
+text-align: center;
+color: rgba(0, 0, 0, 1);
+
+}
+.text{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+color: rgba(120, 120, 135, 1);
+
+}
+.hospital-img {
+ background: rgba(140, 207, 255, 1);
+ border-radius: 50%;
+ padding: 20px;
+ width:100px;
+ 
+    
+}
+.hospital-list-container{
+    background: linear-gradient(81deg, #E7F0FF 9.01%, rgba(232, 241, 255, 0.47) 89.11%);
+
+}
+.hospital-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+.hospital-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.hospital-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+.hospital-address{
+    display: flex;
+    flex-direction: column;
+}
+.hospital-road{
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 600;
+line-height: 28px;
+text-align: left;
+color: rgba(20, 190, 240, 1);
+
+}
+.hospital-city{
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 700;
+line-height: 19.6px;
+text-align: left;
+color: rgba(65, 65, 70, 1);
+
+}
+.hospital-street{
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 400;
+line-height: 19.6px;
+text-align: left;
+color: rgba(65, 65, 70, 1);
+
+}
+
+.fees{
+    display: flex;
+    gap:0.2rem;
+}
+
+.free-visit{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.free{
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 700;
+line-height: 19.6px;
+text-align: left;
+color: rgba(2, 164, 1, 1);
+
+}
+
+.like{
+    background: rgba(2, 164, 1, 1); 
+    padding: 0.2rem 0.5rem;
+    color: white;
+    border-radius: 0.2rem;
+    display: flex;
+    gap:0.5rem;
+}
+.book-btn{
+    padding: 0.5rem;
+    background-color:  rgba(20, 190, 240, 1);
+    border: none;
+    border-radius: 0.2rem;
+    color: white;
+}
+
+.sensodyne img{
+    height: 210px;
+}
