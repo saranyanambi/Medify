@@ -2,23 +2,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 600px;
 }
-
+.footer-right-arrow{
+    display: flex;
+    align-items: center;
+}
+.input-country{
+    display: flex;
+    align-items: center;
+}
 .footer-left {
-    height: 100%;
+   height: 100%;
     flex: 1;
     position: relative;
+    overflow: hidden;
 }
 
-.footer-image1 {
- 
-    bottom: 55px;
-    right: 100%;
+.phone-layer{
+    position: absolute;
+    top:100px;
+    left:40%;
 }
 
+.phone-layer-second{
+    position: absolute;
+    top:180px;
+    left:20%;
+    z-index: 1000;
+    
+}
+
+.phone-display{
+    position: absolute;
+    top:140px;
+    left:41%;
+}
+
+.phone-display img{
+    height: 500px;
+    width: 280px;
+}
+
+.phone-display-second{
+    position: absolute;
+    top:220px;
+    left:21%;
+    z-index: 1000;
+}
 .footer-right{
     display: flex;
     flex-direction: column;
+    margin-right: 6rem;
 }
 
 .footer-first{
@@ -47,8 +82,89 @@ color: rgba(27, 60, 116, 1);
    
     align-items: center;
 }
+.form-container input{
+    padding: 0.5rem;
+    border-radius: 0 0.2rem 0.2em 0;
+    margin-right: 1rem;
+}
+
+.country-code{
+    font-size: 16px; 
+    padding: 0.4rem; 
+    background-color: #f0f0f0; 
+    border: 1px solid black; 
+    border-radius: 0.2rem 0 0 0.2rem; 
+}
+.play-btn-container{
+    display: flex;
+    gap: 1rem;
+}
 .play-btn{
     border: none;
-    background-color:white;
-   
+    background-color:black;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+   margin-top: 1.5rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; 
+        align-items: center; 
+        height:500px;
+    }
+
+    .footer-left {
+        display: none;
+    }
+
+    .footer-right {
+        order: 2;
+        width: 100%; 
+        align-items: center; 
+        padding-left: 0;
+        text-align: center; 
+    }
+
+    .footer-first {
+        font-size: 32px; 
+        line-height: 40px; 
+    }
+
+    .phone-layer,
+    .phone-layer-second,
+    .phone-display,
+    .phone-display-second {
+       display: none;
+    }
+
+    .phone-display img {
+        height: 300px; 
+        width: auto; 
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: stretch; 
+        margin-top: 10px; 
+        gap:1rem;
+    }
+
+    .send-btn {
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-first {
+        font-size: 24px; 
+        line-height: 30px;
+    }
+
+    .send-btn {
+        padding: 0.5rem 0; 
+    }
 }
