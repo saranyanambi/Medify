@@ -1,0 +1,227 @@
+.booking-container{
+    display: flex;
+   
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.booking-card-date{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.hospital-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dates-container {
+    margin-top: 10px; /* Space above the dates */
+    display: block; /* Ensures it's displayed as a block element */
+}
+.hospital-lines{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.hospital-first{
+    font-family: Poppins;
+font-size: 24px;
+font-weight: 500;
+line-height: 36px;
+text-align: left;
+color: rgba(0, 0, 0, 1);
+
+}
+.text{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: rgba(120, 120, 135, 1);
+
+}
+.hospital-img {
+ background: rgba(140, 207, 255, 1);
+ border-radius: 50%;
+ padding: 20px;
+ width:150px;
+ height: 100px;
+ position: relative;   
+}
+
+.tick-img{
+    position: absolute;
+    top:80%;
+    left:70%;
+}
+.hospital-list-container{
+    background: linear-gradient(81deg, #E7F0FF 9.01%, rgba(232, 241, 255, 0.47) 89.11%);
+
+}
+.booking-card-container{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:1rem;
+}
+
+.hospita-total{
+    display: flex;
+    gap:1rem
+}
+.booking-card{
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.booking-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+.booking-address{
+    display: flex;
+    flex-direction: column;
+}
+.booking-road{
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 600;
+line-height: 28px;
+text-align: left;
+color: rgba(20, 190, 240, 1);
+
+}
+.booking-city{
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 700;
+line-height: 19.6px;
+text-align: left;
+color: rgba(65, 65, 70, 1);
+
+}
+.booking-street{
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 400;
+line-height: 19.6px;
+text-align: left;
+color: rgba(65, 65, 70, 1);
+
+}
+
+.fees{
+    display: flex;
+    gap:0.2rem;
+}
+
+.free-visit{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.free{
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 700;
+line-height: 19.6px;
+text-align: left;
+color: rgba(2, 164, 1, 1);
+
+}
+
+.like{
+    background: rgba(2, 164, 1, 1); 
+    padding: 0.2rem 0.5rem;
+    color: white;
+    border-radius: 0.2rem;
+    display: flex;
+    gap:0.5rem;
+}
+.book-btn{
+    padding: 0.5rem;
+    background-color:  rgba(20, 190, 240, 1);
+    border: none;
+    border-radius: 0.2rem;
+    color: white;
+}
+
+.sensodyne img{
+    height: 210px;
+}
+
+
+@media only screen and (max-width:600px){
+    .booking-total{
+        flex-direction: column;
+    }  
+    .booking-card{
+        flex-direction: column;
+        width:300px;
+        
+    }
+    .booking-card-date{
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .booking-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .booking-card-container{
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .hospital-img {
+        width: 80px; /* Adjust image size for smaller screens */
+    }
+    .booking-road {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+    .like {
+        flex-direction: row; /* Ensure like button layout is correct */
+    }
+}
+.time-slot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem
+
+}
+
+.time-slot button{
+    padding: 0.2rem;
+}
+
+.btn-1{
+  
+   border: 1px solid rgba(42, 167, 255, 1);
+   border-radius: 0.2rem;
+   color: rgba(42, 167, 255, 1);
+   background-color: white;
+}
+
+.btn-2{
+    border: 1px solid rgba(0, 165, 0, 1);
+    color: rgba(0, 165, 0, 1);
+    background-color: white;
+}
