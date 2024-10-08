@@ -46,7 +46,7 @@ const Navbar=()=>{
             <div className="navbar">
                 <div className="navbar-container">
                     <div className="logo">
-                    <Link to="/">
+                    <Link to="/" style={{textDecoration:'none'}}>
         
                     <button><img src={logo}/></button>
             
@@ -57,7 +57,9 @@ const Navbar=()=>{
                     </div>
                     <div className="navlink-container">
                         <div className="navlink">{navbar()}</div>
+                        <Link to="/booking">
                         <div><button>My Booking</button></div>
+                        </Link>
                     </div>
                     <div className="small-navlink-container">
                     <button onClick={toggleMenu}>
@@ -68,7 +70,7 @@ const Navbar=()=>{
                     {isMenuOpen && (
                     <div className="dropdown-menu">
                         {smallnavbar()}
-                        <Link to="booking">
+                        <Link to="/booking">
                             <div>
                                 <button className="booking">My Booking</button>
                             </div>
