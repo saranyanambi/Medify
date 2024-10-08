@@ -71,6 +71,25 @@ align-items: center;
     justify-content: center;
 }
 
+.suggestions-list {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    list-style: none;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
 
 
 
@@ -87,9 +106,14 @@ align-items: center;
     .location-icon{
         width:14px;
     }
+    .searchbar-container {
+        flex-direction: column;
+        gap:0.5rem;
+        
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .searchbar-container {
         flex-direction: column;
         gap:0.5rem;
