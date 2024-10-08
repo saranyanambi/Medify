@@ -105,6 +105,11 @@ color: rgba(119, 130, 157, 1);
     .faq-container{
         flex-direction: column;
         padding: 1rem;
+        
+    }
+
+    .faq-left-container{
+        width: 300px;
     }
     
 }
