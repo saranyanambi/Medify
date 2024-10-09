@@ -49,7 +49,7 @@ const slidesPerView = type === "offer" ? 3 : 4;
     return(
         <div className='swiper-total'>
              {type === "specialist" ?<p className='specialist-head'>Our Medical Specialist</p> : null}
-            <div className='swiper-container'>
+            <div className={`swiper-container ${type==="specialist" ? "swiper-specialist" :""}`}>
             <Swiper
            spaceBetween={10}
           slidesPerView={slidesPerView}
