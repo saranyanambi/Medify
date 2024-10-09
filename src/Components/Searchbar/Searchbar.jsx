@@ -194,8 +194,8 @@ import location from "../../assests/Location marker.png";
 import searchIcon from "../../assests/searchIcon.png";
 import axios from "axios";
 import HospitalList from '../FindHospitalsList/HospitalList';
-
-const Searchbar = () => {
+import { useNavigate } from 'react-router-dom';
+const Searchbar = ({heroSearch}) => {
     const [stateInput, setStateInput] = useState('');
     const [cityInput, setCityInput] = useState('');
     const [states, setStates] = useState([]);
@@ -203,7 +203,7 @@ const Searchbar = () => {
     const [suggestedStates, setSuggestedStates] = useState([]);
     const [suggestedCities, setSuggestedCities] = useState([]);
     const [totalhospital, setTotalhospital] = useState([]);
-
+    const navigate=useNavigate();    
     // Fetch states when component mounts
     useEffect(() => {
         const fetchStates = async () => {
@@ -228,17 +228,31 @@ const Searchbar = () => {
     };
 
     const handleStateChange = (e) => {
+        if(heroSearch)
+        {
+            navigate("/Find");
+        }
+
+        else{
         const value = e.target.value;
         setStateInput(value);
         const filteredStates = states.filter(state => state.toLowerCase().includes(value.toLowerCase()));
         setSuggestedStates(filteredStates);
+        }
     };
 
     const handleCityChange = (e) => {
+        if(heroSearch)
+            {
+                navigate("/Find");
+            }
+
+            else{
         const value = e.target.value;
         setCityInput(value);
         const filteredCities = cities.filter(city => city.toLowerCase().includes(value.toLowerCase()));
         setSuggestedCities(filteredCities);
+            }
     };
 
     const handleStateSelect = (state) => {
@@ -253,6 +267,14 @@ const Searchbar = () => {
     };
 
     const handleSearch = async (e) => {
+
+        if(heroSearch)
+            {
+                navigate("/Find");
+            }
+            else{
+
+            
         e.preventDefault();
 
         try {
@@ -261,6 +283,7 @@ const Searchbar = () => {
         } catch (error) {
             console.error("Error fetching hospitals:", error);
         }
+    }
     };
 
     return (
@@ -279,6 +302,7 @@ const Searchbar = () => {
                                         className="input-box"
                                         value={stateInput}
                                         onChange={handleStateChange}
+                                        
                                     />
                                 </div>
                                 {suggestedStates.length > 0 && (

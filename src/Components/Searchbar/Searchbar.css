@@ -93,7 +93,7 @@ align-items: center;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .input-container {
         margin-right: 1rem; /* Adjust margin for smaller screens */
        
