@@ -10,7 +10,7 @@ import Searchbar from "../Searchbar/Searchbar";
 
 const Hero=()=>{
     return(
-        <div>
+        <div className="hero-wrapper">
         <div className="hero-container">
             <div className="hero-left">
                 <p className="herofirstline">Skip the travel! Find Online Medical Centers</p>
@@ -22,14 +22,14 @@ const Hero=()=>{
                 <img src={Heroimg}/>
             </div>
         </div>
-        {/* <div class="hero-search">
-            <Searchbar/>
+        <div className="hero-search">
+            <Searchbar heroSearch={true}/>
             <h3>You May be Looking For</h3>
         <div className="card-container">
             <div className="card-img-container">
             <div className="card">
                 <img src={Doctorimg}/>
-                <p>Doctor</p>
+                <p>Labs</p>
             </div>
             </div>
 
@@ -62,7 +62,7 @@ const Hero=()=>{
             </div>
 
         </div> 
-        </div>*/}
+        </div>
         </div>
     )
 }
