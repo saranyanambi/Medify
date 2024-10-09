@@ -1,5 +1,5 @@
 .parent-container{
-    width: 100%;
+    width: 100vw;
     height: 598px;
     background: linear-gradient(81deg, #E7F0FF 9.01%, rgba(232, 241, 255, 0.47) 89.11%);
     display: flex;
@@ -107,6 +107,7 @@ font-weight: 500;
 line-height: 29px;
 text-align: left;
 color: rgba(119, 130, 157, 1);
+overflow-wrap: break-word;
 
 }
 .parent-list{
@@ -126,40 +127,21 @@ color: rgba(119, 130, 157, 1);
 
 }
 
-/* 
-@media screen and (max-width: 1090px) and (min-width: 1021px) {
-    .parent-img{
-        width:280px;
-    }
-    .image1{
-        top: 150px;
-        left: 200px;
-    }
-    .image2{
-        bottom: 150px;
-        left: 100px;
-    }
-}
 
-@media only screen and (max-width:900px) {
-    .parent-img-total{
-        display: flex;
-        flex-direction: column;
-    }
-} */
-
-
-@media (max-width: 1090px) and (min-width: 1021px) {
+@media (max-width: 1090px) and (min-width: 901px) {
     .parent-img {
         width: 280px; /* Smaller size for medium screens */
     }
     .image1 {
-        top: 10px; /* Adjust position */
-        left: 0; /* Center image */
+        top: 100px; /* Adjust position */
+        left: 100px; /* Center image */
     }
     .image2 {
-        bottom: 10px; /* Adjust position */
-        left: 0; /* Center image */
+        bottom: 90px; /* Adjust position */
+        left: 30px; /* Center image */
+    }
+    .image1 img{
+        width: 300px;
     }
 }
 
@@ -167,17 +149,23 @@ color: rgba(119, 130, 157, 1);
     .parent-img-total {
         flex-direction: column; /* Stack vertically */
     }
-    .parent-button {
-        position: static; /* Make button static for smaller screens */
-        margin: 10px 0; /* Add margin */
-    }
+    
     .image1, .image2 {
         position: relative; /* Allow them to stack */
-        margin: 10px auto; /* Center them */
+       
     }
+    .parent-text{
+        align-items: center;
+        text-align: center;
+    }
+
+    .parent-container{
+        height: 900px;
+    }
+
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) and (min-width:450px){
     .parent-second {
         font-size: 32px; /* Adjust font size */
     }
@@ -186,5 +174,51 @@ color: rgba(119, 130, 157, 1);
     }
     .listItem {
         font-size: 16px; /* Adjust font size */
+    }
+    .image1{
+        top:55px;
+        left:100px;
+    }
+    .image2{
+        bottom: 55px;
+        left: 50px;
+    }
+    .parent-text{
+        align-items: center;
+        text-align: center;
+    }
+    .parent-container{
+        height: 900px;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .image1 img{
+        width: 200px;
+    }
+
+    .image2 img{
+        width: 200px; 
+
+    }
+    .image1{
+        top:0;
+        left:0;
+    }
+
+    .image2{
+        left:0;
+    }
+    .parent-button{
+        bottom: 5px;
+        top:250px;
+    }
+    .parent-container{
+        height: 750px;
+    }
+    .parent-text{
+        align-items: center;
+        text-align: center;
     }
 }
