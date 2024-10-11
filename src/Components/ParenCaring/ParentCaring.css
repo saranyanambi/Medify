@@ -130,15 +130,15 @@ overflow-wrap: break-word;
 
 @media (max-width: 1090px) and (min-width: 901px) {
     .parent-img {
-        width: 280px; /* Smaller size for medium screens */
+        width: 280px;
     }
     .image1 {
-        top: 100px; /* Adjust position */
-        left: 100px; /* Center image */
+        top: 100px;
+        left: 100px;
     }
     .image2 {
-        bottom: 90px; /* Adjust position */
-        left: 30px; /* Center image */
+        bottom: 90px; 
+        left: 30px; 
     }
     .image1 img{
         width: 300px;
@@ -147,11 +147,11 @@ overflow-wrap: break-word;
 
 @media (max-width: 900px) {
     .parent-img-total {
-        flex-direction: column; /* Stack vertically */
+        flex-direction: column;
     }
     
     .image1, .image2 {
-        position: relative; /* Allow them to stack */
+        position: relative; 
        
     }
     .parent-text{
@@ -167,13 +167,13 @@ overflow-wrap: break-word;
 
 @media (max-width: 600px) and (min-width:450px){
     .parent-second {
-        font-size: 32px; /* Adjust font size */
+        font-size: 32px; 
     }
     .parent-third {
-        font-size: 15px; /* Adjust font size */
+        font-size: 15px; 
     }
     .listItem {
-        font-size: 16px; /* Adjust font size */
+        font-size: 16px; 
     }
     .image1{
         top:55px;
