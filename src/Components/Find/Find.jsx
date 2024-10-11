@@ -7,7 +7,7 @@ import Searchbar from "../Searchbar/Searchbar";
 const Find=()=>{
     return(
         <>
-        <Navbar/>
+        <Navbar isFind={true}/>
         <Searchbar/>
         <HospitalList/>
         <FAQ/>
