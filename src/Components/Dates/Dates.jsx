@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css/scrollbar';
+import { Autoplay, Pagination, Navigation,Scrollbar } from 'swiper/modules';
 import "./Dates.css"; 
 // import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -26,13 +27,14 @@ const Slots = props => {
     };
 
     return (
-        <div className={slotsON ? "slotsWrapper tabEnlarge" : "slotsWrapper tabShrink"}>
+     <div className={slotsON ? "slotsWrapper tabEnlarge" : "slotsWrapper tabShrink"}>
             <Swiper
                 onSlideChange={handleSlideChange}
                 spaceBetween={20}
                 slidesPerView={3}
-                modules={[Pagination,Navigation]}
+                modules={[Pagination,Navigation,Scrollbar]}
                 navigation
+                 scrollbar={{ draggable: true }}
                 
                 breakpoints={{
                     300:{
@@ -55,7 +57,7 @@ const Slots = props => {
                     <SwiperSlide key={index}>
                        <button 
                             className="date-button" 
-                            onClick={() => slotClick(date)} // Call slotClick with date and time
+                            onClick={() => slotClick(date)} 
                         >
                             {date}
                         </button>
