@@ -1,38 +1,25 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import sensodyneimg from "../../assests/sensodyne.png";
 import hospitalimg from "../../assests/findhospital.png";
 import thumbs from "../../assests/thumbsup.png";
 import tick from "../../assests/tick.png";
 import "./BookingCards.css";
+import { BookingContext } from "../Context/Context";
+const BookingCards = ({filteredCard}) => {
+    const [bookingData,setBookingData]=useContext(BookingContext);
+    
+    const displayCard=filteredCard.length?filteredCard:bookingData;
 
-const BookingCards = ({bookingCards}) => {
-    // const [bookingData, setBookingData] = useState([]);
-    if (!bookingCards || bookingCards.length === 0) { // Check for undefined or empty array
-        return 
-    }
-    // useEffect(() => {
-    //     const storedData = localStorage.getItem("bookings");
-      
-    //         try {
-    //             const parsedData = JSON.parse(storedData);
-    //             setBookingData(parsedData);
-    //         } catch (error) {
-    //             console.error("Error parsing JSON from localStorage:", error);
-    //         }
-    //     },
-    //  []);
-      
-    // if (bookingData.length === 0) {
-    //     return <h1>No bookings found</h1>; 
-    // }
+    
+  
 
     return (
         <div className="booking-container">
-        {/* <div className="booking-total"> */}
+       
         <div className="booking-card-container">
             {
-        bookingCards.map((item)=>(
+        displayCard.map((item)=>(
             <div className="booking-card-date"> 
             <div className="booking-card">
                 <div className="hospital-img">
