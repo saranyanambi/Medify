@@ -3,12 +3,14 @@
    
     justify-content: center;
     margin-top: 1rem;
+    
 }
 
 .booking-card-date{
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 .hospital-list-container{
     display: flex;
@@ -63,12 +65,13 @@ color: rgba(120, 120, 135, 1);
 
 }
 .booking-card-container{
-    width: 600px;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap:1rem;
+    margin-top: 2rem;
 }
 
 .hospita-total{
@@ -84,6 +87,7 @@ color: rgba(120, 120, 135, 1);
     background-color: white;
     padding: 1rem;
     border-radius: 1rem;
+    
 }
 
 .booking-detail{
@@ -162,12 +166,26 @@ color: rgba(2, 164, 1, 1);
     color: white;
 }
 
+.sensodyne{
+    margin-top: 2rem;
+}
 .sensodyne img{
     height: 210px;
 }
 
-
+@media screen and (max-width:780px){
+    .booking-card{
+        flex-direction: column;
+    }
+    .search-btn{
+        width:50%;
+        gap:1rem;
+    }
+}
 @media only screen and (max-width:600px){
+    .booking-search{
+        flex-direction: column;
+    }
     .booking-total{
         flex-direction: column;
     }  
@@ -189,6 +207,7 @@ color: rgba(2, 164, 1, 1);
         align-items: center;
         justify-content: center;
         
+        margin-top: 4rem;
     }
     .hospital-img {
         width: 80px; /* Adjust image size for smaller screens */
