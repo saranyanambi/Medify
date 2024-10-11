@@ -1,23 +1,15 @@
 import React from 'react';
-//styles
 
-//assets
-// import facebookImg from "../../assests/facebook.png";
-
-
-// import twitterImg from "../../assests/twitter.png";
-// import youtubeImg from "../../assests/youtube.png";
-// import pinterestImg from "../../assests/pintrest.png";
 
 import facebookImg from "../../assests/facebook.png";
 import twitterImg from "../../assests/twitter.png";
 import youtubeImg from "../../assests/youtube.png";
 import pinterestImg from "../../assests/pintrest.png";
 import rightArrowImg from "../../assests/rightArrow.png";
-// import rightArrowImg from "../../assets/rightArrow.svg";
+
 import logo from "../../assests/logo.png";
 import "./Footer.css";
-//components
+
 
 
 const copyrightText = "Copyright ©2023 Surya Nursing Home.com. All Rights Reserved";
