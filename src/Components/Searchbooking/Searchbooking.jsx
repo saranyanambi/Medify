@@ -3,30 +3,40 @@ import searchIcon from "../../assests/searchIcon.png";
 import "./Searchbooking.css";
 import HospitalCard from "../HospitalCard/HospitalCard";
 import BookingCards from "../BookingCards/BookingCards";
-const Searchbooking=()=>{
+import { BookingContext } from "../Context/Context";
+const Searchbooking=({setfilteredCard})=>{
+
+    console.log(localStorage.getItem("bookings"));
     const [bookingData,setBookingData]=useState([]);
     const [query,setQuery]=useState("")
 
     useEffect(()=>{
         const storedData=localStorage.getItem("bookings");
+        console.log(storedData)
         try{
             const parsedData=JSON.parse(storedData);
-            setBookingData(parsedData || []);
+
+            console.log("stoe")
+            if(parsedData)
+               setBookingData(parsedData);
+                setfilteredCard(parsedData);
         }
         catch(e){
             console.log(e);
         }
-    },[])
+    },[setfilteredCard])
     console.log(bookingData);
     const bookingSearch=(e)=>{
         setQuery(e.target.value);
         console.log(query);
-    }
+    
 
     const filteredBooking=bookingData.filter(item=>{
         item.hospitalInfo.hospitalName.toLowerCase().includes(query.toLowerCase());
     })
 
+    setfilteredCard(filteredBooking);
+}
 
 
             return(
@@ -40,7 +50,7 @@ const Searchbooking=()=>{
                             </button>
                 </div>
             </form>
-            <BookingCards bookingCards={query ? filteredBooking : bookingData}/>
+
             </div>
         )
 }

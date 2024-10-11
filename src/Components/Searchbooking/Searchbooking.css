@@ -3,6 +3,10 @@
     justify-content: space-between;
     align-items: center;
     width:400px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+   
 }
 .booking-input{
     padding: 0.5rem;
@@ -10,5 +14,6 @@
 .booking-form{
     border-radius: 0.2rem;
     position: absolute;
+    top:20%;
     right:0;
 }
