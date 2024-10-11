@@ -104,7 +104,7 @@ const Navbar=(props)=>{
                 )}
                 </div>
             </div>
-            {/* <Navsearch/> */}
+           
         </div>
         <NavbarBottom/>
         </>
