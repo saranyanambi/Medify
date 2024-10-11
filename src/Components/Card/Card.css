@@ -24,7 +24,7 @@
     border: none;
 }
 .card-text{
-    font-size: 1.125rem;/* font-size: 18px; */
+    font-size: 1.125rem;
     text-transform: capitalize;
     font-weight: 400;
     color: #ABB6C7;
