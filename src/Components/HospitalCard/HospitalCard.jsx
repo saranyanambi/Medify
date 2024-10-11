@@ -58,7 +58,7 @@ const HospitalCard = ({ totalhospital }) => {
         const existingBookings = JSON.parse(localStorage.getItem("bookings")) || [];
         const newBooking = { day, time, hospitalInfo };
 
-        // Check if this booking already exists
+      
         const isBookingExists = existingBookings.some(booking => 
             booking.hospitalInfo.id === hospitalInfo.id && 
             booking.day === day && 
