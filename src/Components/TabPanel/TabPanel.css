@@ -29,8 +29,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 2rem; */
-    flex: 1;
+   
+   
 }
 .slot-btn{
     border-color:  #2AA8FF;;
@@ -42,7 +42,7 @@
     align-items: center;
 }
 
-/* devices below 750px */
+
 @media screen and (max-width: 750px){
     .timeButtonsArray{
         gap: 0.5rem;
@@ -50,7 +50,7 @@
 }
 
 
-/* devices below 750px */
+
 @media screen and (max-width: 750px){
     .slotSession{
         width: 100%;
@@ -62,3 +62,15 @@
     }
     
 }
+
+@media screen and (max-width:600px){
+    .slotSession{
+        width: 60%;
+        justify-content: center;
+    }
+    .timeButtonsArray{
+        flex-direction: column;
+        
+    }
+} 
+
