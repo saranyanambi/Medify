@@ -5,7 +5,10 @@ import "./Navbar.css";
 import hamburger from "../../assests/hamburger.png";
 // import Button from '../Button/Button';
 import { useState } from "react";
-const Navbar=()=>{
+import Searchbar from "../Searchbar/Searchbar";
+const Navbar=(props)=>{
+
+     const {isHome,isFind}=props;
 
     const navBarLinks = ["Find Doctors", "Hospitals", "Medicines", "Surgeries", "Software for Provider", "Facilities"];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,6 +39,28 @@ const Navbar=()=>{
             <Link to={link} className="small-nav-link"><span className="small-nav-inner">{nav}</span></Link>
             )
         })
+    }
+
+    const NavbarBottom=()=>{
+        if(isHome){
+            return null;
+        }
+        return(
+            <div className="nav-bottom-container">
+                <span className="nav-bottom"></span>
+
+            </div>
+        )
+    }
+
+    const Navsearch=()=>{
+        if(isFind){
+            return(
+                <div>
+                    <Searchbar/>
+                </div>
+            )
+        }
     }
     return(
         <>
@@ -79,7 +104,9 @@ const Navbar=()=>{
                 )}
                 </div>
             </div>
+            {/* <Navsearch/> */}
         </div>
+        <NavbarBottom/>
         </>
     )
 }
