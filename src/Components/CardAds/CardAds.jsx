@@ -61,10 +61,10 @@ const slidesPerView = type === "offer" ? 3 : 4;
             
             breakpoints={{
                 200: {
-                    slidesPerView: 1, // Show 1 slide on small screens
+                    slidesPerView: 1, 
                 },
                 768: {
-                    slidesPerView: type === "offer" ? 2 : 2, // Show 2 slides on medium screens
+                    slidesPerView: type === "offer" ? 2 : 2, 
                 },
                 1024: { slidesPerView: slidesPerView }
             }}
