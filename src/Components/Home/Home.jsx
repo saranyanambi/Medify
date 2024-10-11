@@ -13,7 +13,7 @@ import MainFooter from "../Footer/Footer";
 const Home=()=>{
     return(
         <>
-        <Navbar/>
+        <Navbar isHome={true}/>
         <Hero/>
         <CardAds type="offer"/>
         <Specialization/>
