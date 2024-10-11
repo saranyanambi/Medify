@@ -4,11 +4,14 @@ import sensodyneimg from "../../assests/sensodyne.png";
 import hospitalimg from "../../assests/findhospital.png";
 import thumbs from "../../assests/thumbsup.png";
 import Dates from "../Dates/Dates"; // Ensure this is the correct path
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import TabPanel from "../TabPanel/TabPanel";
 import HospitalCard from "../HospitalCard/HospitalCard";
+import { TotalHospitalsContext } from "../Context/Context";
 
-const HospitalList = ({ totalhospital }) => {
+const HospitalList = () => {
+
+    const [totalhospital,setTotalhospital]=useContext(TotalHospitalsContext);
 
     if (!totalhospital) return null;
 
