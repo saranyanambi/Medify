@@ -245,21 +245,21 @@ color: #5C6169;
     border-radius: 0.5rem;
     position: absolute;
     top: 60%;
-    left: 10%;
+    left: 20%;
 }
 
 .card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allow cards to wrap */
-    margin: 0 -0.5rem; /* Optional: adjust spacing */
+    flex-wrap: wrap; 
+    margin: 0 -0.5rem; 
 }
 
 .card-img-container {
-    flex: 1 1 100px; /* Flexible base width for cards */
-    padding: 0.5rem; /* Adjust padding for better spacing */
-    max-width: 200px; /* Optional: limit max width of cards */
+    flex: 1 1 100px;
+    padding: 0.5rem; 
+    max-width: 200px; 
 }
 
 .card {
@@ -270,8 +270,8 @@ color: #5C6169;
     cursor: pointer;
     border: 1px solid transparent;
     padding: 2rem;
-    width: 100%; /* Full width for responsive design */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .card img {
