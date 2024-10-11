@@ -4,6 +4,14 @@
     align-items: center;
    
 }
+.hero-search{
+    margin-top: 2rem;
+    background-color: white;
+    border: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
 
 
 
@@ -15,9 +23,9 @@
 
 
 .icon-input-wrapper {
-    display: flex; /* Use flex to align items */
-    align-items: center; /* Center items vertically */
-    position: relative; /* Needed for absolute positioning of the icon */
+    display: flex; 
+    align-items: center; 
+    position: relative; 
 }
 .location-icon {
     position: absolute;
@@ -66,6 +74,8 @@ align-items: center;
     border: white;
     border-radius: 0.5rem;
     padding: 1rem;
+    position: absolute;
+    top:15%;
 }
 
 .searchbar-container {
@@ -97,7 +107,7 @@ align-items: center;
 
 @media (max-width: 1000px) {
     .input-container {
-        margin-right: 1rem; /* Adjust margin for smaller screens */
+        margin-right: 1rem; 
        
     }
 

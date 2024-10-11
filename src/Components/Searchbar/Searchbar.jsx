@@ -188,21 +188,24 @@
 
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import "./Searchbar.css";
 import location from "../../assests/Location marker.png";
 import searchIcon from "../../assests/searchIcon.png";
 import axios from "axios";
 import HospitalList from '../FindHospitalsList/HospitalList';
+import { TotalHospitalsContext } from '../Context/Context';
 import { useNavigate } from 'react-router-dom';
 const Searchbar = ({heroSearch}) => {
+    console.log(heroSearch)
+    const [totalhospital,setTotalhospital]=useContext(TotalHospitalsContext);
     const [stateInput, setStateInput] = useState('');
     const [cityInput, setCityInput] = useState('');
     const [states, setStates] = useState([]);
     const [cities, setCities] = useState([]);
     const [suggestedStates, setSuggestedStates] = useState([]);
     const [suggestedCities, setSuggestedCities] = useState([]);
-    const [totalhospital, setTotalhospital] = useState([]);
+    // const [totalhospital, setTotalhospital] = useState([]);
     const navigate=useNavigate();    
     // Fetch states when component mounts
     useEffect(() => {
@@ -289,7 +292,7 @@ const Searchbar = ({heroSearch}) => {
     return (
         <div className="search-bar-total-container">
             <div className="searchbar-container">
-                <div className="searchbar">
+                <div className={`${heroSearch===true?"":"searchbar"}`}>
                     <form onSubmit={handleSearch}>
                         <div className="searchbar-container">
                             <div className="input-container">
@@ -346,7 +349,7 @@ const Searchbar = ({heroSearch}) => {
                     </form>
                 </div>
             </div>
-            {totalhospital.length > 0 && <HospitalList totalhospital={totalhospital} />}
+            {/* {totalhospital.length > 0 && <HospitalList totalhospital={totalhospital} />} */}
         </div>
     );
 }
