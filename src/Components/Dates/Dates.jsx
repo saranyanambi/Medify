@@ -11,14 +11,15 @@ import { printFormattedDates } from "../DateData/Date";
 import TabPanel from '../TabPanel/TabPanel';
 
 const Slots = props => {
-    const { slotsON, slotClick, dateTime } = props;
+    const { slotsON, slotClick } = props;
 
-    console.log(slotsON,slotClick,dateTime)
+    console.log("slot",slotsON);
+
+    console.log(slotsON,slotClick)
     const [activeIndex, setActiveIndex] = useState(0);
     const dateArray = useRef(printFormattedDates());
 
-    console.log(dateArray)
-    console.log("dates");
+    
     const handleSlideChange = (swiper) => {
         console.log("Slide changed to: ", swiper.activeIndex);
         setActiveIndex(swiper.activeIndex);
@@ -28,12 +29,26 @@ const Slots = props => {
         <div className={slotsON ? "slotsWrapper tabEnlarge" : "slotsWrapper tabShrink"}>
             <Swiper
                 onSlideChange={handleSlideChange}
-                spaceBetween={50}
+                spaceBetween={20}
                 slidesPerView={3}
                 modules={[Pagination,Navigation]}
                 navigation
                 
-                className="mySwiper"
+                breakpoints={{
+                    300:{
+                        slidesPerView: 1,
+                    },
+                    640: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                }}
+               
             >
                 {dateArray.current.map((date, index) => (
                    
