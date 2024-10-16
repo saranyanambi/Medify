@@ -6,29 +6,30 @@ import BookingCards from "../BookingCards/BookingCards";
 import { BookingContext } from "../Context/Context";
 const Searchbooking=({setfilteredCard})=>{
 
-    console.log(localStorage.getItem("bookings"));
+   
     const [bookingData,setBookingData]=useState([]);
     const [query,setQuery]=useState("")
 
     useEffect(()=>{
         const storedData=localStorage.getItem("bookings");
-        console.log(storedData)
+       
         try{
             const parsedData=JSON.parse(storedData);
 
-            console.log("stoe")
-            if(parsedData)
+            
+            if(parsedData){
                setBookingData(parsedData);
                 setfilteredCard(parsedData);
+            }
         }
         catch(e){
             console.log(e);
         }
     },[setfilteredCard])
-    console.log(bookingData);
+   
     const bookingSearch=(e)=>{
         setQuery(e.target.value);
-        console.log(query);
+       
     
 
     const filteredBooking=bookingData.filter(item=>{
