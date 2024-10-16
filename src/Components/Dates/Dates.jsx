@@ -14,7 +14,7 @@ import TabPanel from '../TabPanel/TabPanel';
 const Slots = props => {
     const { slotsON, slotClick } = props;
 
-    console.log("slot",slotsON);
+    
 
     console.log(slotsON,slotClick)
     const [activeIndex, setActiveIndex] = useState(0);
@@ -22,7 +22,6 @@ const Slots = props => {
 
     
     const handleSlideChange = (swiper) => {
-        console.log("Slide changed to: ", swiper.activeIndex);
         setActiveIndex(swiper.activeIndex);
     };
 
@@ -34,8 +33,6 @@ const Slots = props => {
                 slidesPerView={3}
                 modules={[Pagination,Navigation,Scrollbar]}
                 navigation
-                 scrollbar={{ draggable: true }}
-                
                 breakpoints={{
                     300:{
                         slidesPerView: 1,
