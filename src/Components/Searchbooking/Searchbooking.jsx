@@ -28,27 +28,29 @@ const Searchbooking=({setfilteredCard})=>{
     },[setfilteredCard])
    
     const bookingSearch=(e)=>{
-        setQuery(e.target.value);
-       
+        e.preventDefault()
+    const filteredBooking = bookingData.filter(item => 
+        item.hospitalInfo.hospitalName.toLowerCase().includes(query.toLowerCase())
+    );
     
 
-    const filteredBooking=bookingData.filter(item=>{
-        item.hospitalInfo.hospitalName.toLowerCase().includes(query.toLowerCase());
-    })
-
     setfilteredCard(filteredBooking);
+
+    setQuery("");
 }
 
 
             return(
            
                 <div>
-            <form className="booking-form">
+            <form className="booking-form" onSubmit={bookingSearch}>
                  <div className="booking-search">
-                <input type="text" placeholder="Search by Hospital" className="booking-input" onChange={bookingSearch}/>
-                <button className="search-btn">
+                <input type="text" placeholder="Search by Hospital" className="booking-input" value={query} onChange={(e)=>setQuery(e.target.value)}/>
+                <button className="search-btn"  type="submit">
                                 <img src={searchIcon} alt="Search Icon"/>Search
+                               
                             </button>
+                            
                 </div>
             </form>
 
