@@ -25,18 +25,13 @@ const HospitalCard = ({ totalhospital }) => {
         setBooked(bookedMap);
     }, []);
 
-    useEffect(() => {
-        console.log("datesVisible changed to:", datesVisible);
-    }, [datesVisible]);
 
     if (!totalhospital) return null;
 
     const handleClick = (item, index) => {
-        console.log("click")
+        
         setActiveHospitalIndex(index);
         setDatesVisible(true);
-
-        console.log(datesVisible);
         setHospitalInfo({
             hospitalName: item["Hospital Name"],
             city: item["City"],
@@ -53,7 +48,7 @@ const HospitalCard = ({ totalhospital }) => {
             return alert("Select Slot Date and Time to book.");
         }
 
-        console.log("Before booking - datesVisible:", datesVisible);
+       
 
         const existingBookings = JSON.parse(localStorage.getItem("bookings")) || [];
         const newBooking = { day, time, hospitalInfo };
@@ -84,7 +79,7 @@ const HospitalCard = ({ totalhospital }) => {
         setTime("");
         setActiveHospitalIndex(null);
 
-        console.log("Before booking - datesVisible:", datesVisible);
+        
     };
 
     const dayselect = (day) => {
