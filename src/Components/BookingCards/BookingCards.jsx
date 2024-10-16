@@ -11,7 +11,9 @@ const BookingCards = ({filteredCard}) => {
     
     const displayCard=filteredCard.length?filteredCard:bookingData;
 
-    
+    if (displayCard.length === 0) {
+        return <div>No bookings available</div>;
+    }
   
 
     return (
