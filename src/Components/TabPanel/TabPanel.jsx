@@ -12,7 +12,6 @@ const SlotSession = props => {
   const { type, timings, suffix, slotClick, slotDate, dateTime ,slotday} = props;
   
   const displayButtons = () => {
-    console.log("buttond");
     return timings.map(item => {
       return <button className='slot-btn'  onClick={() => slotClick(slotday,item,suffix)}>{item}{suffix}</button>
     })
