@@ -6,9 +6,10 @@ import hamburger from "../../assests/hamburger.png";
 // import Button from '../Button/Button';
 import { useState } from "react";
 import Searchbar from "../Searchbar/Searchbar";
+import Searchbooking from "../Searchbooking/Searchbooking";
 const Navbar=(props)=>{
 
-     const {isHome,isFind}=props;
+     const {isHome,isFind,isBook}=props;
 
     const navBarLinks = ["Find Doctors", "Hospitals", "Medicines", "Surgeries", "Software for Provider", "Facilities"];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,6 +55,7 @@ const Navbar=(props)=>{
     }
 
     const Navsearch=()=>{
+
         if(isFind){
             return(
                 <div>
@@ -62,6 +64,19 @@ const Navbar=(props)=>{
             )
         }
     }
+
+    // const NavBook=()=>{
+    //     if(isBook){
+
+    //         return(
+    //     <div className="nav-book">
+    //         <span>My Booking</span>
+    //         <div>
+    //             <Searchbooking/>
+    //         </div>
+    //     </div>
+    //     )}
+    // }
     return(
         <>
         <div className='topline'>
@@ -103,10 +118,12 @@ const Navbar=(props)=>{
                     </div>
                 )}
                 </div>
+               
+                
             </div>
-           
+            <NavbarBottom/>
         </div>
-        <NavbarBottom/>
+      
         </>
     )
 }
