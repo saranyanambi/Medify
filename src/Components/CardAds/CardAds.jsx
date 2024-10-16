@@ -15,7 +15,7 @@ import specialist6 from "../../assests/specialist6.png";
 import specialist7 from "../../assests/specialist7.png";
 
 const CardAds=({type})=>{
-console.log(type)
+
 const slidesPerView = type === "offer" ? 3 : 4; 
     const specialistData=[
         {name: "Dr. Lesley Hull", specialization: "Medicine", image: specialist6},
