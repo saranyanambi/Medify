@@ -34,14 +34,9 @@ const BookingCards = ({filteredCard}) => {
                 <div className="booking-detail">
                     <div className="booking-road">{item["hospitalInfo"]["hospitalName"]}</div>
                     <div className="booking-address">
-                        <div className="booking-city">{`${item["hospitalInfo"]["city"]}, ${item["hospitalInfo"]["country"]}`}</div>
+                        <div className="booking-city">{`${item["hospitalInfo"]["city"]}, ${item["hospitalInfo"]["county"]}`}</div>
                         <div className="booking-street">{item["hospitalInfo"]["hospitalType"]}</div>
                         <div className="booking-street">more</div>
-                    </div>
-                    <div className="fees">
-                        <span className="free">FREE</span>
-                        <span className="booking-street">{`$${500}`}</span>
-                        <span className="booking-street">Consultation fee at clinic</span>
                     </div>
                     <div className="like">
                         <img src={thumbs} alt="thumbs" />
